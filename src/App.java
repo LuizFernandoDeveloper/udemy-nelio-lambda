@@ -11,7 +11,7 @@ public class App {
         list.add(new Product("Notebook", 1200.00));
         list.add(new Product("Tablet", 450.00));
 
-        Collections.sort(list);
+        list.sort(new MyComparator());
 
         for (Product product : list) {
             System.out.println(product);
