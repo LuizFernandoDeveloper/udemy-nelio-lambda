@@ -4,6 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import model.Product;
+import util.ProductPredicate;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -11,11 +12,12 @@ public class App {
         list.add(new Product("TV", 900.00));
         list.add(new Product("Notebook", 1200.00));
         list.add(new Product("Tablet", 450.00));
-
-        list.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
+        list.add(new Product("Mouse", 50.00));
+        list.add(new Product("Hd Case", 80.90));
+        list.removeIf(new ProductPredicate());
 
         for (Product product : list) {
-            System.out.println(product);
+            System.err.println(product);
         }
     }
 }
