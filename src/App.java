@@ -15,7 +15,7 @@ public class App {
         list.add(new Product("Mouse", 50.00));
         list.add(new Product("Hd Case", 80.90));
 
-        list.removeIf(Product::staticProductPredicate);
+        list.removeIf(Product::nonStaticProductPredicate);
 
         for (Product product : list) {
             System.err.println(product);
